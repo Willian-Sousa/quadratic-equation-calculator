@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quadratic Equation App</string>
+    <string name="app_titlte">Quadratic Equation Calculator</string>
+    <string name="first_coefficient_a_textfield">Enter first coefficient (A)</string>
+    <string name="second_coefficient_b_textfield">Enter second coefficient (B)</string>
+    <string name="third_coefficient_c_textfield">Enter third coefficient (C)</string>
+    <string name="quadratic_equation_label">Quadratic Equation</string>
+    <string name="calculate_btn">Calculate</string>
+    <string name="results_text">Results</string>
+</resources>
