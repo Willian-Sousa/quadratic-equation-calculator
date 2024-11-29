@@ -10,4 +10,4 @@ Ex: Ax<sup>2</sup> + Bx + C = 0
 5. See the results
 
 # Dowload
- Go to the release page to dowload the apk.
+ Go to the [Releases](https://github.com/Willian-Sousa/quadratic-equation-calculator/releases/tag/release) page to dowload the apk.
