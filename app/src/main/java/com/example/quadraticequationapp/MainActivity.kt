@@ -37,10 +37,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.quadraticequationapp.ui.theme.QuadraticEquationAppTheme
-import java.math.BigDecimal
-import java.math.RoundingMode
 import kotlin.math.pow
-import kotlin.math.round
 import kotlin.math.sqrt
 
 class MainActivity : ComponentActivity() {
@@ -199,16 +196,15 @@ fun CoefficientTextField(
 
 
 fun quadraticFormula(coefficientA: Double, coefficientB: Double, coefficientC: Double): String {
+
     val delta = deltaCalculation(coefficientA, coefficientB, coefficientC)
 
-    val x1 = BigDecimal((-coefficientB + sqrt(delta)) / (2 * coefficientA))
-        .setScale(2, RoundingMode.HALF_EVEN);
-    val x2 = BigDecimal((-coefficientB - sqrt(delta)) / (2 * coefficientA))
-        .setScale(2, RoundingMode.HALF_EVEN);
+    val x1 = Math.round((-coefficientB + sqrt(delta)) / (2 * coefficientA) * 100.0) / 100.0
+    val x2 = Math.round((-coefficientB - sqrt(delta)) / (2 * coefficientA) * 100.0) / 100.0
 
 
-    return if (delta < 0.0) {
-        "There is no solution to this equation."
+    return if (delta < 0){
+        "There is no solution to this equation because Delta is a negative number. \nDelta = $delta"
     } else {
         "The solution to this equation is: \nx1 = $x1 \nx2 = $x2"
     }
